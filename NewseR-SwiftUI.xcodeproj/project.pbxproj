@@ -11,6 +11,10 @@
 		FC8CECAF28BC8BFF009F9FC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CECAE28BC8BFF009F9FC9 /* ContentView.swift */; };
 		FC8CECB128BC8C01009F9FC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8CECB028BC8C01009F9FC9 /* Assets.xcassets */; };
 		FC8CECB428BC8C01009F9FC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8CECB328BC8C01009F9FC9 /* Preview Assets.xcassets */; };
+		FC8CECBD28BD1940009F9FC9 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CECBC28BD1940009F9FC9 /* NetworkManger.swift */; };
+		FC8CECC028BD1BE7009F9FC9 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CECBF28BD1BE7009F9FC9 /* PostData.swift */; };
+		FC8CECC328BD2E76009F9FC9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CECC228BD2E76009F9FC9 /* DetailView.swift */; };
+		FC8CECC728BD3AE5009F9FC9 /* WebViewNewser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CECC628BD3AE5009F9FC9 /* WebViewNewser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		FC8CECAE28BC8BFF009F9FC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FC8CECB028BC8C01009F9FC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC8CECB328BC8C01009F9FC9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FC8CECBC28BD1940009F9FC9 /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
+		FC8CECBF28BD1BE7009F9FC9 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		FC8CECC228BD2E76009F9FC9 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		FC8CECC628BD3AE5009F9FC9 /* WebViewNewser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewNewser.swift; sourceTree = "<group>"; };
+		FC8CECC828BD3E41009F9FC9 /* NewseR-SwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "NewseR-SwiftUI.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +60,10 @@
 		FC8CECAB28BC8BFF009F9FC9 /* NewseR-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				FC8CECC828BD3E41009F9FC9 /* NewseR-SwiftUI.entitlements */,
+				FC8CECBB28BD1910009F9FC9 /* Models */,
 				FC8CECAC28BC8BFF009F9FC9 /* NewseR_SwiftUIApp.swift */,
-				FC8CECAE28BC8BFF009F9FC9 /* ContentView.swift */,
+				FC8CECC128BD2E57009F9FC9 /* Views */,
 				FC8CECB028BC8C01009F9FC9 /* Assets.xcassets */,
 				FC8CECB228BC8C01009F9FC9 /* Preview Content */,
 			);
@@ -65,6 +76,25 @@
 				FC8CECB328BC8C01009F9FC9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FC8CECBB28BD1910009F9FC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC8CECBC28BD1940009F9FC9 /* NetworkManger.swift */,
+				FC8CECBF28BD1BE7009F9FC9 /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FC8CECC128BD2E57009F9FC9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC8CECAE28BC8BFF009F9FC9 /* ContentView.swift */,
+				FC8CECC228BD2E76009F9FC9 /* DetailView.swift */,
+				FC8CECC628BD3AE5009F9FC9 /* WebViewNewser.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC8CECBD28BD1940009F9FC9 /* NetworkManger.swift in Sources */,
+				FC8CECC028BD1BE7009F9FC9 /* PostData.swift in Sources */,
 				FC8CECAF28BC8BFF009F9FC9 /* ContentView.swift in Sources */,
+				FC8CECC728BD3AE5009F9FC9 /* WebViewNewser.swift in Sources */,
+				FC8CECC328BD2E76009F9FC9 /* DetailView.swift in Sources */,
 				FC8CECAD28BC8BFF009F9FC9 /* NewseR_SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,9 +298,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "NewseR-SwiftUI/NewseR-SwiftUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NewseR-SwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = 8322522RX9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -281,6 +317,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gleb.NewseR-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -292,9 +329,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "NewseR-SwiftUI/NewseR-SwiftUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NewseR-SwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = 8322522RX9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -309,6 +348,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gleb.NewseR-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
